@@ -16,7 +16,7 @@ This project provides an end-to-end pipeline for object detection using a subset
 ```
 pip install -r requirements.txt
 ```
-2. Get the COCO dataset (subset with top 10 classes consisting of ~2000 images) and store it in the `data/` directory
+2. Run `downloadDataset.py` to get the COCO dataset (subset with top 10 classes consisting of ~2000 images) and store it in the `data/` directory
 3. Run `createBalanced.py` to balance the classes in the dataset
 3. Run all the scripts in the `notebooks/` directory to train the model, evaluate it, and perform inference
 
