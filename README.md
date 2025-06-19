@@ -12,9 +12,13 @@ This project provides an end-to-end pipeline for object detection using a subset
 
 ## Setup
 
-1. Install the required Python packages as listed in `requirements.txt`.
-2. Prepare your COCO-format images and annotation files in the `data/coco_top10_2000/` directory. The annotation file should be named `labels.json`.
-3. Optionally, balance your dataset using the provided balancing script to ensure each class has an equal number of samples.
+1. Install the required Python packages
+```
+pip install -r requirements.txt
+```
+2. Get the COCO dataset (subset with top 10 classes consisting of ~2000 images) and store it in the `data/` directory
+3. Run `createBalanced.py` to balance the classes in the dataset
+3. Run all the scripts in the `notebooks/` directory to train the model, evaluate it, and perform inference
 
 ---
 
@@ -29,7 +33,7 @@ This project provides an end-to-end pipeline for object detection using a subset
 - The model is configured to match the number of classes in your dataset, and the training process will save model checkpoints for later use.
 
 ### Dataset Balancing
-- If your dataset is imbalanced (some classes have many more samples than others), use the balancing script to create a new annotation file with an equal number of samples per class. This helps prevent the model from being biased toward more frequent classes.
+- If your dataset is imbalanced (some classes have many more samples than others), use the balancing script to create a new annotation file (`labels_balanced.json`)with an equal number of samples per class. This helps prevent the model from being biased toward more frequent classes.
 - The script works with any COCO-format annotation file and automatically adapts to your class structure.
 
 ### Inference and Visualization
