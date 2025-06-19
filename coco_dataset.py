@@ -58,7 +58,4 @@ class COCODetectionDataset(Dataset):
         return img, target
 
     def __len__(self):
-        return len(self.ids) 
-
-# Utility to get class names for visualization
-# Usage: dataset.class_names[label-1] (label is 1-based) 
+        return len(self.ids)
