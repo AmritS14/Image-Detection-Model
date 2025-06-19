@@ -3,4 +3,6 @@ torchvision>=0.15.0
 pycocotools
 Pillow
 matplotlib
-tqdm 
+tqdm
+fiftyone
+numpy
